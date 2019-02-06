@@ -3,23 +3,29 @@ class ProductsController < ApplicationController
     before_action :set_product, only: [:show, :update, :destroy]
     def index 
         @products = Product.all
-        render json: @products
+        # byebug
+        result = @products.map do | product |
+            image = url_for( product.image ) rescue nil
+            product.as_json.merge( { image: image } )
+        end
+        render json: result
     end
     
     
     def show
-        render json: @product
+        render json: @product.as_json.merge( { image: url_for( @product.image ) } )
     end
     
     
     def create 
         @product = Product.create(product_params)
-        render json: @product
+        render json: @product.as_json.merge( { image: url_for( @product.image ) } )
     end 
     
     def update 
-        @product.update_attributes(product_params)
-        render json: @product
+        update_params = product_params[ :image ].class == String ? product_params.except( :image ) : product_params
+        @product.update_attributes(update_params)
+        render json: @product.as_json.merge( { image: url_for( @product.image ) } )
     end
     
     

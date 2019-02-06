@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   
   resources :products do 
     resources :reviews, shallow: true do 
+      # resources :conversation, shallow: true do  
     resources :categories, shallow: true 
     end
 
@@ -11,7 +12,7 @@ Rails.application.routes.draw do
   #  get "/products", to: "products#index"
    get "/reviews", to: "reviews#index"
    get "/products", to: "products#index"
-   #get "/categories", to: "categories#index"
+   get "/categories", to: "categories#index"
 
    resources :conversations, only: [:index, :create]
    resources :messages, only: [:create]

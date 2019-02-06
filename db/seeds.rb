@@ -13,24 +13,24 @@ Review.destroy_all
 User.destroy_all
 
 books = Category.create({
-    name: "books",
+    name: "Books",
 })
 
 
 electronics = Category.create({
-    name: "electronics",
+    name: "Electronics",
 })
 
 beauty = Category.create({
-    name: "beautys",
+    name: "Beautys",
 })
 
 toys_and_games = Category.create({
-    name: "toys and games ",
+    name: "Toys & Games ",
 })
 
 luggage = Category.create({
-    name: "luggage",
+    name: "Luggage",
 })
 
 
@@ -43,7 +43,6 @@ who_moved_my_cheese = Product.create({
  expected_price: 30,
  color: "white",
  model_year: 1998,
- image: "https://images-na.ssl-images-amazon.com/images/I/51QGl7HfNyL._SX314_BO1,204,203,200_.jpg",
  category: books
 })
 
@@ -54,7 +53,6 @@ mac_book_pro = Product.create({
  expected_price: 8000,
  color: "Silver",
  model_year: 2018,
- image: "https://i.ytimg.com/vi/drG7Dh71IbM/maxresdefault.jpg",
  category: electronics
 })
 
@@ -65,7 +63,6 @@ phone = Product.create({
  expected_price: 2000,
  color: "Black",
  model_year: 2018,
- image: "https://static.digit.in/product/d8bc6ea49b37a79bb9f9d907050ff4bffa7098a5.jpeg",
  category: electronics
 })
 
@@ -76,7 +73,6 @@ drone = Product.create({
  expected_price: 2200,
  color: "Black",
  model_year: 2017,
- image: "https://image.dhgate.com/0x0/f2/albu/g5/M00/03/6B/rBVaI1l1yBCAfCVGAAGAcVQZeh0042.jpg",
  category: electronics
 })
 
@@ -88,7 +84,6 @@ speakers = Product.create({
  expected_price: 1300,
  color: "Silver",
  model_year: 2019,
- image: "https://images.philips.com/is/image/PhilipsConsumer/SB365_37-RTP-global-001?$jpglarge$&wid=1250",
  category: electronics
 })
 
@@ -100,7 +95,6 @@ the_hunchback_of_notre_dame = Product.create({
  expected_price: 90,
  color: "white",
  model_year: 1996,
- image: "https://images.gr-assets.com/books/1388342667l/30597.jpg",
  category: books
 })
 
@@ -112,7 +106,6 @@ harry_potter_and_the_goblet_of_fire = Product.create({
  expected_price: 80,
  color: "black",
  model_year: 1996,
- image: "https://upload.wikimedia.org/wikipedia/en/thumb/c/c9/Harry_Potter_and_the_Goblet_of_Fire_Poster.jpg/220px-Harry_Potter_and_the_Goblet_of_Fire_Poster.jpg",
  category: books
 })
 
@@ -125,7 +118,6 @@ it_luggage = Product.create({
  expected_price: 160,
  color: "blue",
  model_year: 2018,
- image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgF4kkIz9EQtDLpykMNP9e7DgcrTCW3gxqlpcqh2g0kOHY0P6r",
  category: luggage
 })
 
@@ -137,7 +129,6 @@ luggage = Product.create({
  expected_price: 0,
  color: "blue",
  model_year: 0,
- image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgF4kkIz9EQtDLpykMNP9e7DgcrTCW3gxqlpcqh2g0kOHY0P6r",
  category: luggage
 })
 
